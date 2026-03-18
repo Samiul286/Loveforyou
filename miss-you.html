@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missing You Every Day</title>
+    <!-- Same fonts from index.html: Gaegu & M PLUS Rounded 1c -->
+    <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=M+PLUS+Rounded+1c:wght@400;500;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="miss-you.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+   <!-- layout: Floating clouds, background sparkles, maybe SVG background -->
+   <div id="bg-layer">
+        <div class="cloud cloud-1"></div>
+        <div class="cloud cloud-2"></div>
+        <div class="cloud cloud-3"></div>
+        <canvas id="sparkles-canvas"></canvas>
+   </div>
+
+   <!-- Content container -->
+   <main class="story-container">
+       <section class="hero-section">
+           <h1 class="bounce-text">I Miss You... <i class="fa-solid fa-heart" style="color: #ff7b9c;"></i></h1>
+           <p class="subtitle">Every second feels like an hour without you.</p>
+           
+           <div class="counter-card soft-card">
+               <h3>Time Apart</h3>
+               <div id="time-counter" class="time-display">
+                    <div class="time-box"><span id="days">00</span><p>Days</p></div>
+                    <div class="time-box"><span id="hours">00</span><p>Hours</p></div>
+                    <div class="time-box"><span id="mins">00</span><p>Mins</p></div>
+                    <div class="time-box"><span id="secs">00</span><p>Secs</p></div>
+               </div>
+           </div>
+       </section>
+
+       <section class="memories-section">
+           <h2>Little Moments I Treasure <i class="fa-solid fa-star" style="color:#ffffff;"></i></h2>
+           <div class="polaroid-gallery">
+               <!-- 3 polaroids side by side, wrapping on mobile -->
+               <div class="polaroid p-left">
+                   <div class="photo-placeholder" style="background-image:url('photos/6.png')"></div>
+                   <p>Your beautiful smile...</p>
+               </div>
+               <div class="polaroid p-center">
+                   <div class="photo-placeholder" style="background-image:url('photos/7.png')"></div>
+                   <p>Such a sweet memory!</p>
+               </div>
+               <div class="polaroid p-right">
+                   <div class="photo-placeholder" style="background-image:url('photos/8.jpg')"></div>
+                   <p>I cherish this every day.</p>
+               </div>
+           </div>
+       </section>
+
+       <section class="letter-section">
+           <div class="cute-envelope soft-card">
+               <div class="wax-seal"><i class="fa-solid fa-envelope-open-text"></i></div>
+               <div class="letter-content" id="letter-text">
+                   <!-- Typed out by JS -->
+               </div>
+           </div>
+       </section>
+
+       <section class="stats-section">
+           <h2>How much I miss you?</h2>
+           <div class="stat-bars">
+               <div class="stat-row">
+                   <i class="fa-solid fa-cloud-moon" style="color: #ffffff;"></i>
+                   <div class="bar-bg"><div class="bar-fill" style="width: 100%; background: #ff9eb5;"></div></div>
+                   <span>Every Night</span>
+               </div>
+               <div class="stat-row">
+                   <i class="fa-solid fa-sun" style="color: #ffdae0;"></i>
+                   <div class="bar-bg"><div class="bar-fill" style="width: 100%; background: #88d4fe;"></div></div>
+                   <span>Every Morning</span>
+               </div>
+               <div class="stat-row">
+                   <i class="fa-solid fa-infinity" style="color: #ff7b9c;"></i>
+                   <div class="bar-bg"><div class="bar-fill" style="width: 100%; background: #ffffff;"></div></div>
+                   <span>Infinitely</span>
+               </div>
+           </div>
+       </section>
+        
+       <footer class="footer-actions">
+           <a href="index.html" class="cute-btn"><i class="fa-solid fa-arrow-left"></i> Dreamy Story</a>
+           <button class="cute-btn" id="send-hug">Send a Hug! <i class="fa-solid fa-hand-holding-heart" style="color: #ff9eb5;"></i></button>
+       </footer>
+   </main>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-ring"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="miss-you.js"></script>
+</body>
+</html>
